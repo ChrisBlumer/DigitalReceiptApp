@@ -9,8 +9,6 @@ import BarcodeScanner from './BarcodeScanner'
 import getAuth from './Helpers/Auth'
 import { Button, TextField } from '@mui/material'
 
-// import TempLogo from '../../public/TempLogo.png'
-
 
 export default function Login(){
 

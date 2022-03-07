@@ -7,6 +7,9 @@ import CreateAccont from './CreateAccount'
 import './CSS/login.css'
 import BarcodeScanner from './BarcodeScanner'
 import getAuth from './Helpers/Auth'
+import { Button, TextField } from '@mui/material'
+
+// import TempLogo from '../../public/TempLogo.png'
 
 
 export default function Login(){
@@ -23,11 +26,19 @@ export default function Login(){
             {!auth ? pageTitle !== titleOptions[1] 
                 ? <div>
                     <div>
-                        <input id='email' placeholder='Email'/>
-                        <input id='password' type='password' placeholder='Password'/>
+                        <img src='/TempLogo.png' alt="Digital Receipt Temporary Logo" width="25%" height="25%"></img>
+                    </div>
+                    <div id='loginInputs'>
+                        {/* <input id='email' placeholder='Email'/> */}
+                        <TextField id="email" label="Email" variant="outlined" placeholder='Email'/>
+                        <TextField id="password" type="password" label="Password" variant="outlined" />
+                        {/* <input id='password' type='password' placeholder='Password'/> */}
                     </div>
                     <div>
-                        <button onClick={()=>{
+                        <Button
+                            className='btn'
+                            variant="contained"
+                            onClick={()=>{
                             var email = document.getElementById('email').value
                             var password = document.getElementById('password').value
 
@@ -41,13 +52,17 @@ export default function Login(){
                             }
                         }}>
                             Login
-                        </button>
-                        <button onClick={() =>{
-                            setPageTitle(titleOptions[1])
+                        </Button>
+                        <Button
+                            className='btn'
+                            variant="contained"
+                            onClick={() =>{
+                                setPageTitle(titleOptions[1])
                         }}>
                             Create Account
-                        </button>
+                        </Button>
                     </div>
+                    <a href=''>Forgot Password</a>
                 </div>
                 : <CreateAccont setPageTitle={setPageTitle} titleOtions={titleOptions}/>
             : pageTitle === titleOptions[2] ? <Home/>

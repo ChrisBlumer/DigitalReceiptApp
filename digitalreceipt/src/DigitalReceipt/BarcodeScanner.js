@@ -2,7 +2,8 @@ import React from 'react'
 import Scan from './Components/Scan'
 
 import CollapsibleTable from './Components/Grid'
-// import './CSS/barcodescanner.css'
+import { Button } from '@mui/material'
+import './CSS/barcodescanner.css'
 
 export default function BarcodeScanner({setPageTitle, titleOtions, ...props}){
 
@@ -28,20 +29,24 @@ export default function BarcodeScanner({setPageTitle, titleOtions, ...props}){
                 }
             </div>
             <div>
-                <button onClick={() => {
+                <Button 
+                    variant="contained"
+                    onClick={() => {
                     console.log('Saving Reciept')
                     setValidScan(false)
                     setScannedData(null)
                 }}>
                     Save Reciept
-                </button>
-                <button onClick={() => {
+                </Button>
+                <Button 
+                    variant="contained"
+                    onClick={() => {
                     console.log('Cancelling Request')
                     setValidScan(false)
                     setScannedData(null)
                 }}>
                     Cancel
-                </button>
+                </Button>
             </div>
         </div>
     )

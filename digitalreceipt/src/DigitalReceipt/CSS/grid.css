@@ -1,0 +1,9 @@
+
+
+.MuiTableHead-root{
+    background-color: #1976d2;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+    font-weight: bolder;
+}

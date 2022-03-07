@@ -5,8 +5,6 @@
 #loginInputs{
     margin-top: 2%;
     display:inline-block;
-    
-
 }
 
 .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
@@ -14,6 +12,22 @@
     width:75%;
 }
 
-.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-sghohy-MuiButtonBase-root-MuiButton-root {
+/* For AWS build */
+.MuiFormControl-root.MuiTextField-root.css-i44wyl{
+    margin:1%;
+    width:75%;
+}
+
+#email #password{
+    margin:1%;
+    width:75%;
+}
+
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-sghohy-MuiButtonBase-root-MuiButton-root{
+    margin: 1%;
+}
+
+/*  For AWS build */
+.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.btn.css-1hw9j7s{
     margin: 1%;
 }
